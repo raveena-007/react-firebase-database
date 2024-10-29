@@ -3,6 +3,7 @@ import Write from './components/Write';
 import Read from './components/Read';
 import Update from './components/Update';
 import UpdateWrite from './components/UpdateWrite'; // Correct path to UpdateWrite
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/read' element={<Read />} />
           <Route path='/update' element={<Update />} />
           <Route path='/updatewrite/:firebaseId' element={<UpdateWrite />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
     </div>
